@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taptale – Official Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official landing page for Taptale, the mobile adventure-growth game." />
+
+  <style>
+    :root {
+      --tt-green: #26a65b;
+      --tt-green-dark: #1e7c44;
+      --tt-yellow: #ffd63b;
+      --tt-bg: #fffdf3;
+      --tt-text: #263238;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0, var(--tt-bg) 60%);
+      color: var(--tt-text);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .logo-badge {
+      width: 120px;
+      height: 120px;
+      border-radius: 32px;
+      margin: 0 auto 24px;
+      background: linear-gradient(145deg, var(--tt-yellow), #ffe784);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 15px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo-badge::before {
+      content: "";
+      width: 65px;
+      height: 65px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff, var(--tt-green));
+      mask-image: radial-gradient(circle at 50% 50%, black 65%, transparent 66%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, black 65%, transparent 66%);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--tt-green-dark);
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #60717b;
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 14px;
+      background: var(--tt-green);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 22px rgba(38, 166, 91, 0.35);
+      transition: 0.2s ease;
+      margin-top: 12px;
+    }
+
+    .btn:hover {
+      background: var(--tt-green-dark);
+      box-shadow: 0 10px 28px rgba(38, 166, 91, 0.45);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #78909c;
+    }
+
+    a.link {
+      color: var(--tt-green-dark);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(38, 166, 91, 0.3);
+    }
+
+    a.link:hover {
+      border-bottom-color: rgba(38, 166, 91, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo-badge"></div>
+
+    <h1>Taptale</h1>
+    <p class="subtitle">A growing world, shaped by every tap.</p>
+
+    <a href="privacy-policy/" class="btn">Privacy Policy</a>
+
+    <footer>
+      © <span id="year"></span> Taptale – Milestone Artwork. All rights reserved.  
+      <br><br>
+      <a href="mailto:rubencarreno.dev@gmail.com" class="link">Contact developer</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
